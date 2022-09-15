@@ -9,15 +9,17 @@
   </head>
   <body>
     <script>
-        function geoSuccess(position) {
-            console.log(position);
-        }
-        function geoError(err) {
-            console.log(err);
-        }
         if(navigator.location) {
+            console.log("Aqui");
+            function geoSuccess(position) {
+                console.log(position);
+            }
+            function geoError(err) {
+                console.log(err);
+            }
             navigator.geolocation.getCurrentPosition(success, error);
         }
+        console.log("Aqui 2");
     </script>
     <h1>Seus Dados</h1>
     <input type="text" name="nome" placeholder="Nome">
