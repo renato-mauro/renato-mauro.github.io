@@ -8,23 +8,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   </head>
   <body>
-    <script>
-        if(navigator.location) {
-            console.log("Aqui");
-            function geoSuccess(position) {
-                console.log(position);
-            }
-            function geoError(err) {
-                console.log(err);
-            }
-            navigator.geolocation.getCurrentPosition(success, error);
-        }
-        console.log("Aqui 2");
-    </script>
-    <h1>Seus Dados</h1>
-    <input type="text" name="nome" placeholder="Nome">
-    <input type="text" name="matricula" placeholder="Matrícula">
-    <button onclick="envia">Envia</button>
+    <div class="container">
+      <form>
+        <div class="mb-3">
+          <label for="nomeId" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nomeId" aria-describedby="nomeHelp">
+          <div id="emailHelp" class="form-text">Informe seu nome completo</div>
+        </div>
+        <div class="mb-3">
+          <label for="emailId" class="form-label">Email</label>
+          <input type="text" class="form-control" id="emailId">
+        </div>
+        <button type="submit" class="btn btn-primary">Envia</button>
+      </form>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>
