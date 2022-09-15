@@ -9,6 +9,15 @@
   </head>
   <body>
     <script>
+        function geoSuccess(position) {
+            console.log(position);
+        }
+        function geoError(err) {
+            console.log(err);
+        }
+        if(navigator.location) {
+            navigator.geolocation.getCurrentPosition(success, error);
+        }
     </script>
     <h1>Seus Dados</h1>
     <input type="text" name="nome" placeholder="Nome">
